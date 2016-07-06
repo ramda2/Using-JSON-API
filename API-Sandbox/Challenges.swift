@@ -32,7 +32,7 @@ internal func exerciseOne() {
     // then the value stored in "first". We  then told it that we wanted the value as a string.
     
     /*
-     
+
      Now it's your turn to get the rest of the values needed to print the following:
      
      "<first name> <last name> lives at <street name> in <city>, <state>, <post code>.
@@ -40,7 +40,18 @@ internal func exerciseOne() {
      call at <cell phone number>."
      
      */
+    print(firstName)
+    let lastName = userData["results"][0]["name"]["last"].stringValue
+    let streetName = userData["results"][0]["location"]["street"].stringValue
+    let city = userData["results"][0]["location"]["city"].stringValue
+    let state = userData["results"][0]["location"]["state"].stringValue
+    let postCode = userData["results"][0]["location"]["postcode"].stringValue
+    let title = userData["results"][0]["name"]["title"].stringValue
+    let email = userData["results"][0]["email"].stringValue
+    let cell = userData["results"][0]["cell"].stringValue
     
+
+    print("\(firstName) \(lastName) lives at \(streetName) in \(city), \(state), \(postCode). If you want to contact \(title), \(lastName), you can email \(email) or call at \(cell).")
     
     
     

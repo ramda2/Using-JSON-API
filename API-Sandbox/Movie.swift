@@ -17,9 +17,9 @@ struct Movie {
     let releaseDate: String
     
     init(json: JSON) {
-        self.name = ""
-        self.rightsOwner = ""
-        self.price = 0
+        self.name = json["im:name"]["label"].stringValue
+        self.rightsOwner = json["rights"]["label"].stringValue
+        self.price = json["w3"]
         self.link = ""
         self.releaseDate = ""
     }

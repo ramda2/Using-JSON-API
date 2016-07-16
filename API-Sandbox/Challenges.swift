@@ -45,7 +45,7 @@ internal func exerciseOne() {
     let streetName = userData["results"][0]["location"]["street"].stringValue
     let city = userData["results"][0]["location"]["city"].stringValue
     let state = userData["results"][0]["location"]["state"].stringValue
-    let postCode = userData["results"][0]["location"]["postcode"].stringValue
+    let postCode = userData["results"][0]["location"]["postcode"].intValue
     let title = userData["results"][0]["name"]["title"].stringValue
     let email = userData["results"][0]["email"].stringValue
     let cell = userData["results"][0]["cell"].stringValue
@@ -76,10 +76,11 @@ internal func exerciseTwo() {
     // We save the value for ["feed"]["entry"][0] to topMovieData to pull out just the first movie's data
     let topMovieData = moviesData["feed"]["entry"][0]
     let topMovie = Movie(json: topMovieData)
+
     
     // Uncomment this print statement when you are ready to check your code!
     
-//    print("The top movie is \(topMovie.name) by \(topMovie.rightsOwner). It costs $\(topMovie.price) and was released on \(topMovie.releaseDate). You can view it on iTunes here: \(topMovie.link)")
+    //print("The top movie is \(topMovie.name) by \(topMovie.rightsOwner). It costs $\(topMovie.price) and was released on \(topMovie.releaseDate). You can view it on iTunes here: \(topMovie.link)")
 }
 
 internal func exerciseThree() {
